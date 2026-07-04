@@ -80,7 +80,7 @@ body {
   border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Sidebar Profile Badge */
+/* Sidebar Profile Section */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -90,23 +90,22 @@ body {
   padding-bottom: 2rem;
 }
 
-.avatar-badge {
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan));
-  color: #ffffff;
+.profile-img {
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: 1px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
   margin-bottom: 1.2rem;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-smooth);
   animation: float 6s ease-in-out infinite;
+}
+
+.profile-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
 }
 
 .profile-section h1 {
